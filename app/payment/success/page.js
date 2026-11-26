@@ -1,0 +1,2 @@
+import Link from 'next/link';import SiteLayout from '../../../components/SiteLayout';
+export default function Success(){return <SiteLayout><main className="container py-24 max-w-2xl text-center"><div className="text-5xl mb-5">✓</div><h1 className="display text-4xl text-deep">Checkout completed</h1><p className="muted mt-5 leading-7">Thank you. Payment confirmation is recorded only after Stripe verifies the transaction. Contact our academy if you need a receipt or have any questions.</p><Link className="btn btn-primary mt-8" href="/">Return home</Link></main></SiteLayout>}

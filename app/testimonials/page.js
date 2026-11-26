@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import SiteLayout from '../../components/SiteLayout';
+import VideoPageHeading from '../../components/VideoPageHeading';
+export default function Testimonials(){return <SiteLayout><main className="ref-site"><VideoPageHeading eyebrow="STUDENT STORIES" title={<>Student <em>Testimonials</em></>} description="Feedback from learners and families helps us keep improving."/><section className="ref-section ref-pattern"><div className="container ref-center-heading"><h2>Your Story Could <span>Be Next</span></h2><p>Start learning the Quran with Fatima Online Quran Academy.</p><div className="ref-center-action"><Link className="ref-goldbtn" href="/free-trial">Start Free Trial</Link><a className="ref-whatsapp-btn" href="https://wa.me/923030535615" target="_blank" rel="noreferrer">WhatsApp Us</a></div></div></section></main></SiteLayout>}

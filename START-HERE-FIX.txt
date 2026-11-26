@@ -1,0 +1,27 @@
+Fatima Online Quran Academy - Gold Statistics Section CORRECTED
+===============================================================
+
+Why your screenshot showed long words spilling outside circles:
+It showed the OLD code with values One-to-one / Online / All Ages / Flexible.
+The corrected code uses 1:1 / LIVE / ALL / FLEX / 6, with small labels
+underneath, large 104px gold circles on desktop and mobile-specific sizing.
+
+HOW TO RUN THE CORRECT VERSION IN WINDOWS:
+1. Stop the old dev server (Ctrl+C in its Command Prompt).
+2. Extract THIS ZIP to a NEW folder. Do NOT merge with an old extracted folder.
+3. Copy your existing .env.local to the NEW folder next to package.json.
+4. Double-click RUN-FRESH-WINDOWS.bat
+   Or in Command Prompt inside this folder: 
+      if exist .next rmdir /s /q .next
+      npm install
+      npm run dev
+5. In Chrome press Ctrl+Shift+R for a hard refresh.
+
+Verify which version you are running: open lib/homeTrustStats.js.
+It must contain the five values: '1:1', 'LIVE', 'ALL', 'FLEX', '6'.
+If it still has 'One-to-one', 'Online', 'All Ages', 'Flexible', you are
+running an older copy of the website.
+
+The numbers 500+ students / 50+ teachers / 4.9 rating in the Quraanic
+reference were NOT copied as Fatima Academy's real statistics.
+Do not commit .env.local to GitHub.

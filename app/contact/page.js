@@ -1,0 +1,4 @@
+import SiteLayout from '../../components/SiteLayout';
+import VideoPageHeading from '../../components/VideoPageHeading';
+import InquiryForm from '../../components/InquiryForm';
+export default function Contact(){return <SiteLayout><main className="ref-site"><VideoPageHeading eyebrow="CONTACT US" title={<>Get in <em>Touch</em></>} description="Have a question about a Quran course, teacher, fees or timing? Send us a message."/><section className="ref-section ref-pattern"><div className="container ref-contact-layout"><div className="ref-contact-info"><h2>Contact Fatima Academy</h2><p>We can help you choose a course, ask about teachers and arrange a suitable learning time.</p><a href="https://wa.me/923030535615" target="_blank" rel="noreferrer">WhatsApp: +92 303 0535615</a><a href="tel:+923030535615">Call: +92 303 0535615</a></div><div className="ref-form-box"><InquiryForm defaultType="Course & Fee Inquiry"/></div></div></section></main></SiteLayout>}

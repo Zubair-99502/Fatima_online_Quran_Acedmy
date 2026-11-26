@@ -1,0 +1,2 @@
+import Link from 'next/link';import SiteLayout from '../../../components/SiteLayout';
+export default function Cancel(){return <SiteLayout><main className="container py-24 max-w-2xl text-center"><h1 className="display text-4xl text-deep">Checkout canceled</h1><p className="muted mt-5 leading-7">No payment has been confirmed. You may return to fees and try again when ready.</p><Link className="btn btn-primary mt-8" href="/pricing">Back to pricing</Link></main></SiteLayout>}

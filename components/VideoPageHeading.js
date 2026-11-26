@@ -1,0 +1,1 @@
+export default function VideoPageHeading({eyebrow, title, description}){return <section className="ref-page-heading"><div className="container"><span className="ref-mini">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div></section>}

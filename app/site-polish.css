@@ -1,0 +1,247 @@
+/* Fatima Academy – reference-matched interaction layer. Scoped so the Maxton admin stays unchanged. */
+.ref-header{height:76px;background:#0b0a11;box-shadow:0 8px 32px #04030748;z-index:200}
+.ref-header .ref-nav{width:min(1280px,calc(100% - 46px));max-width:none;gap:clamp(15px,2vw,32px)}
+.ref-header .ref-brand{gap:7px;min-width:190px}
+.ref-header .ref-brand-symbol{width:32px;height:34px;display:grid;place-items:center;color:#dab942;border:1px solid #b79334;border-radius:50% 50% 40% 40%}
+.ref-header .ref-brand strong{font-size:23px;letter-spacing:-.05em;color:#dfb93e;white-space:nowrap}
+.ref-header .ref-brand small{font-size:6.8px;letter-spacing:.16em;color:#ac924e}
+.ref-header .ref-navlinks{gap:clamp(15px,1.85vw,29px);margin-left:auto;white-space:nowrap}
+.ref-header .ref-navlinks>a,.ref-header .ref-nav-trigger{font-size:13px;font-weight:600;color:#9c9494;transition:color .2s;line-height:1.4}
+.ref-header .ref-navlinks>a:hover,.ref-header .ref-navlinks>a.active,.ref-header .ref-nav-trigger:hover,.ref-header .ref-nav-trigger.active{color:#c9a648}
+.ref-header .ref-nav-trigger{appearance:none;display:inline-flex;align-items:center;gap:6px;padding:18px 0;background:transparent;border:0;cursor:pointer}
+.ref-header .ref-nav-trigger svg,.ref-header .ref-currency svg{transition:transform .2s}
+.ref-header .ref-dropdown.is-open .ref-nav-trigger svg,.ref-header .ref-currency[aria-expanded=true] svg{transform:rotate(180deg)}
+.ref-header .ref-dropdown{height:76px}
+.ref-header .ref-dropdown-menu{display:grid;top:70px;left:-16px;min-width:253px;padding:8px;background:#171521;border:1px solid #3a3041;border-radius:12px;box-shadow:0 22px 55px #000a;animation:fatima-menu-in .16s ease both}
+.ref-header .ref-dropdown-menu a{font-size:12px;padding:13px 13px;white-space:nowrap;color:#c1bbc0}
+.ref-header .ref-dropdown-menu a:hover,.ref-header .ref-dropdown-menu a:focus-visible{background:#292237;color:#e6bd5a}
+.ref-header .ref-actions{gap:12px;margin-left:clamp(5px,1.5vw,17px)}
+.ref-header .ref-actions>.ref-outline,.ref-header .ref-actions>.ref-goldbtn{padding:12px 21px;font-size:12px}
+.ref-header .ref-currency-wrap{position:relative;flex-shrink:0}
+.ref-header .ref-currency{display:inline-flex;cursor:pointer;gap:9px;align-items:center;background:#211e2d;border:1px solid #423948;border-radius:999px;color:#ded8dc;padding:10px 13px;min-width:128px;font-weight:700}
+.ref-header .ref-currency .ref-flag{font-size:17px;line-height:1}
+.ref-header .ref-currency-menu{position:absolute;top:calc(100% + 10px);right:0;width:285px;max-height:min(420px,65vh);overflow:auto;padding:8px;background:#181621;border:1px solid #4a3c51;border-radius:14px;box-shadow:0 20px 55px #000b;animation:fatima-menu-in .16s ease both;z-index:202}
+.ref-header .ref-currency-menu-heading{padding:12px;color:#d5b65b;font-weight:700;font-size:12px;border-bottom:1px solid #37303f;margin-bottom:6px}
+.ref-header .ref-currency-menu button{display:flex;width:100%;gap:12px;align-items:center;background:transparent;border:0;border-radius:8px;color:#eee7eb;text-align:left;cursor:pointer;padding:10px;font-size:13px}
+.ref-header .ref-currency-menu button:hover,.ref-header .ref-currency-menu button:focus-visible,.ref-header .ref-currency-menu button[aria-selected=true]{background:#2b2439}
+.ref-header .ref-currency-menu button>span:nth-child(2){display:flex;flex-direction:column;gap:3px;flex:1}
+.ref-header .ref-currency-menu button small{font-size:10px;color:#b2a4b6}
+.ref-header .ref-currency-menu button svg{color:#d5b65b}
+.ref-header .ref-currency-note{padding:10px 12px 5px;color:#a79eae;font-size:11px;line-height:1.6}
+.ref-header .ref-mobile-nav{max-height:calc(100vh - 76px);overflow:auto;background:#13111b;padding:18px 6vw 25px;box-shadow:0 24px 50px #0009}
+.ref-header .ref-mobile-group button{display:flex;justify-content:space-between;align-items:center;width:100%;padding:12px 7px;background:transparent;color:#f0e9e5;font-size:14px;border:0;cursor:pointer}
+.ref-header .ref-mobile-group button[aria-expanded=true] svg{transform:rotate(180deg)}
+.ref-header .ref-mobile-submenu{display:grid;margin:0 0 7px 14px;border-left:1px solid #7a6137;padding-left:14px}
+.ref-header .ref-mobile-submenu a{font-size:12px;color:#bdb2bf;padding:9px 5px}
+.ref-header .ref-mobile-nav>a:hover,.ref-header .ref-mobile-submenu a:hover{color:#dab95a}
+.ref-header .ref-mobile-nav .ref-currency-wrap{margin:13px 0}
+.ref-header .ref-currency-wrap.is-mobile .ref-currency{width:100%;justify-content:space-between}
+.ref-header .ref-currency-wrap.is-mobile .ref-currency-menu{position:relative;top:5px;right:auto;width:100%;max-height:260px}
+.ref-header .ref-mobile-actions{display:flex;gap:12px;flex-wrap:wrap;padding-top:13px;border-top:1px solid #38303d}
+.ref-header .ref-mobile-actions a{flex:1;white-space:nowrap}
+.ref-header .ref-menu-toggle{align-items:center;justify-content:center}
+.ref-header a:focus-visible,.ref-header button:focus-visible,.ref-site a:focus-visible,.ref-site button:focus-visible{outline:2px solid #e8c566;outline-offset:3px}
+@keyframes fatima-menu-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1280px){.ref-header .ref-nav{width:calc(100% - 36px);gap:14px}.ref-header .ref-navlinks{gap:14px}.ref-header .ref-brand{min-width:170px}.ref-header .ref-brand strong{font-size:20px}.ref-header .ref-actions{gap:8px}.ref-header .ref-actions>.ref-outline,.ref-header .ref-actions>.ref-goldbtn{padding:11px 15px}.ref-header .ref-currency{min-width:110px;padding:9px 11px}}
+@media(max-width:1060px){.ref-header .ref-navlinks,.ref-header .ref-actions{display:none}.ref-header .ref-menu-toggle{display:flex;margin-left:auto}.ref-header .ref-nav{gap:20px}}
+@media(max-width:640px){.ref-header{height:66px}.ref-header .ref-nav{width:calc(100% - 30px);height:66px}.ref-header .ref-mobile-nav{max-height:calc(100vh - 66px)}.ref-header .ref-brand strong{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.ref-header *, .ref-site *{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Reference-style subtle entrance animations, but never change the layout of the hero. */
+.ref-hero-inner > .ref-arabic{animation:fatima-rise .65s ease both}
+.ref-hero-inner > h1{animation:fatima-rise .7s .12s ease both}
+.ref-hero-inner > .ref-hero-sub{animation:fatima-rise .7s .24s ease both}
+.ref-hero-inner > .ref-hero-actions{animation:fatima-rise .7s .32s ease both}
+@keyframes fatima-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.ref-benefit,.ref-step,.ref-teacher,.ref-course-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.ref-benefit:hover,.ref-step:hover,.ref-teacher:hover,.ref-course-card:hover{transform:translateY(-4px);border-color:#a78b47;box-shadow:0 14px 30px #0005}
+.ref-fee-currency{max-width:900px;margin:0 auto 25px;padding:13px 20px;color:#cfc4c7!important;background:#211b2e;border:1px solid #494055;border-radius:12px;font-size:13px;text-align:center}
+.ref-fee-currency strong{color:#e2bf65}
+.ref-carousel-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;color:#a89eae;font-size:12px;gap:15px}
+.ref-carousel-toolbar>div{display:flex;gap:9px}
+.ref-carousel-toolbar button{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid #aa8d49;background:#211b2c;color:#e7c569;cursor:pointer}
+.ref-carousel-toolbar button:hover,.ref-carousel-toolbar button:focus-visible{background:#c7a24d;color:#16111a}
+.ref-carousel-viewport{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 42px)/3);gap:21px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#8a6a39 #201b2c;padding:4px 2px 16px}
+.ref-carousel-slide{scroll-snap-align:start;min-width:0;display:flex}
+.ref-carousel-slide>.ref-course-card{width:100%}
+@media(max-width:900px){.ref-carousel-viewport{grid-auto-columns:calc((100% - 21px)/2)}}
+@media(max-width:610px){.ref-carousel-viewport{grid-auto-columns:min(87%,370px);gap:14px}.ref-carousel-toolbar>span{font-size:10px}}
+@media(prefers-reduced-motion:no-preference){
+.ref-site .fatima-reveal-ready{opacity:0;transform:translateY(16px)}
+.ref-site .fatima-reveal-ready.fatima-in-view{opacity:1;transform:translateY(0);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
+}
+
+/* Dark Maxton-style ADMIN LOGIN. Scoped: public site and admin dashboard remain unchanged. */
+.maxton-login-shell{min-height:100vh;display:grid;grid-template-columns:minmax(350px,.9fr) minmax(480px,1.1fr);background:#171b1e;color:#eff2f5;font-family:Arial,Helvetica,sans-serif}
+.maxton-login-shell *{box-sizing:border-box}
+.maxton-login-aside{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh;padding:40px clamp(26px,3.9vw,75px);background:linear-gradient(145deg,#22272c 0%,#1d2227 64%,#1c2025 100%);border-right:1px solid #353b42}
+.maxton-login-aside::before{content:"";position:absolute;z-index:-1;width:600px;height:600px;right:-340px;top:13%;border-radius:50%;background:radial-gradient(circle,#2368b522,transparent 70%)}
+.maxton-login-aside::after{content:"";position:absolute;z-index:-1;width:380px;height:380px;left:-210px;bottom:-200px;border-radius:50%;background:radial-gradient(circle,#8d29d01c,transparent 70%)}
+.maxton-login-brand{display:flex;gap:12px;align-items:center;width:max-content;text-decoration:none}
+.maxton-login-brandmark{display:grid;place-items:center;width:45px;height:45px;flex:0 0 45px;border-radius:13px;color:#fff;background:linear-gradient(138deg,#20e8b4 0%,#1688e5 54%,#bd1bdd 100%);box-shadow:0 8px 24px #1688e52a}
+.maxton-login-brandtext{display:grid;gap:4px}
+.maxton-login-brandtext strong{font-size:24px;color:#f6f7fa;font-weight:700;letter-spacing:-.035em;line-height:1}
+.maxton-login-brandtext small{font-size:9px;letter-spacing:.165em;color:#a9b7c8;line-height:1.3}
+.maxton-login-aside-center{max-width:540px;padding:55px 0}
+.maxton-login-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;font-weight:800;letter-spacing:.19em;color:#9bacbf}
+.maxton-login-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:#1ec4a2;box-shadow:0 0 0 4px #1ec4a222}
+.maxton-login-aside h1{font-size:clamp(38px,4.4vw,65px);letter-spacing:-.045em;line-height:1.12;font-weight:650;color:#fff;margin:22px 0}
+.maxton-login-aside h1 em{font-style:normal;color:#6caaff}
+.maxton-login-aside-center>p{max-width:445px;color:#aeb9c7;font-size:15px;line-height:1.9}
+.maxton-login-feature-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:38px}
+.maxton-login-feature-list span{display:flex;align-items:center;gap:11px;padding:16px 13px;background:#292f35;border:1px solid #353d45;border-radius:12px;color:#d7dfe8;font-size:12px;white-space:nowrap}
+.maxton-login-feature-list svg{color:#63a8ff;flex:0 0 auto}
+.maxton-login-aside-bottom{display:flex;gap:10px;align-items:center;color:#8392a6;font-size:12px;line-height:1.5}
+.maxton-login-aside-bottom svg{color:#1fc4a2;flex:0 0 auto}
+.maxton-login-content{min-width:0;min-height:100vh;display:flex;flex-direction:column;padding:25px clamp(24px,3vw,55px) 22px}
+.maxton-login-topline{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.maxton-login-section-label{display:inline-flex;align-items:center;gap:10px;color:#8598af;letter-spacing:.16em;font-weight:700;font-size:10px}
+.maxton-login-accent-line{display:inline-block;width:21px;height:2px;background:#247bf1;border-radius:2px}
+.maxton-login-back{color:#b3c0d0;font-size:12px;display:inline-flex;align-items:center;gap:7px;transition:color .15s}
+.maxton-login-back:hover{color:#fff}
+.maxton-login-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:38px 0}
+.maxton-login-card{width:min(100%,475px);background:#22272c;border:1px solid #383f47;border-radius:19px;padding:clamp(25px,3.3vw,42px);box-shadow:0 27px 65px #0004}
+.maxton-login-card-head{margin-bottom:30px}
+.maxton-login-card-icon{width:49px;height:49px;display:grid;place-items:center;border:1px solid #2c4c72;border-radius:14px;margin-bottom:23px;color:#70adff;background:#20344d}
+.maxton-login-card-head h2{margin:9px 0;font-size:clamp(27px,3vw,34px);letter-spacing:-.03em;line-height:1.17;font-weight:650;color:#fff}
+.maxton-login-card-head>p{color:#9ba9b9;font-size:13px;line-height:1.7;margin:0}
+.maxton-login-label{display:block;font-size:12px;font-weight:650;color:#e1e6ed;margin:17px 0 9px}
+.maxton-login-input{width:100%;height:49px;padding:12px 15px;border-radius:9px;border:1px solid #48515c;outline:none;background:#171b20;color:#f1f4fa;box-shadow:none;transition:border-color .18s,box-shadow .18s;font-size:14px}
+.maxton-login-input::placeholder{color:#8390a0}
+.maxton-login-input:focus{border-color:#438dff;box-shadow:0 0 0 3px #2987ff2b}
+.maxton-login-input:disabled{opacity:.75}
+.maxton-login-password-wrap{position:relative}
+.maxton-login-password-wrap .maxton-login-input{padding-right:53px}
+.maxton-login-password-toggle{display:grid;place-items:center;position:absolute;right:6px;top:5px;width:40px;height:39px;border:0;border-radius:8px;background:transparent;color:#97a5b7;cursor:pointer}
+.maxton-login-password-toggle:hover{color:#fff;background:#333a43}
+.maxton-login-error{margin-top:18px;border:1px solid #c1546180;background:#55273460;color:#ffbfc4;padding:12px 14px;border-radius:9px;font-size:12px;line-height:1.55}
+.maxton-login-submit{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;border:0;border-radius:9px;min-height:49px;background:linear-gradient(105deg,#0f7cf2,#3c6fda);color:white;font-size:14px;font-weight:750;cursor:pointer;box-shadow:0 10px 28px #106fe828;transition:transform .2s,filter .2s,box-shadow .2s;margin-top:25px}
+.maxton-login-submit:hover:not(:disabled){filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 14px 29px #106fe841}
+.maxton-login-submit:disabled{opacity:.7;cursor:wait}
+.maxton-login-security{display:flex;gap:8px;align-items:center;font-size:11px;color:#8fa3b6;line-height:1.6;margin-top:24px}
+.maxton-login-security svg{color:#30bc92;flex:0 0 auto}
+.maxton-login-under-card,.maxton-login-footer{font-size:11px;color:#707d8d;line-height:1.5}
+.maxton-login-under-card{margin-top:22px;text-align:center}
+.maxton-login-mobile-brand{display:none}
+.maxton-login-shell a:focus-visible,.maxton-login-shell button:focus-visible{outline:2px solid #7ab6ff;outline-offset:3px}
+@keyframes fatima-login-spin{to{transform:rotate(360deg)}}
+.maxton-login-spinner{animation:fatima-login-spin .75s linear infinite}
+@media(max-width:1050px){.maxton-login-shell{grid-template-columns:minmax(300px,.8fr) minmax(430px,1.2fr)}.maxton-login-feature-list{grid-template-columns:1fr}.maxton-login-aside{padding:35px 27px}}
+@media(max-width:760px){.maxton-login-shell{display:block}.maxton-login-aside{display:none}.maxton-login-content{min-height:100vh;padding:20px 20px 15px}.maxton-login-center{padding:55px 0 30px}.maxton-login-mobile-brand{display:flex;align-items:center;gap:11px;margin-bottom:29px}.maxton-login-topline{flex-direction:row}.maxton-login-card{max-width:470px}.maxton-login-footer{text-align:center}}
+@media(max-width:420px){.maxton-login-content{padding:18px 14px 15px}.maxton-login-card{padding:26px 22px}.maxton-login-section-label{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.maxton-login-shell *, .maxton-login-shell *::before,.maxton-login-shell *::after{animation:none!important;transition:none!important}}
+
+
+/* 26 Nov 2026 — Quraanic screenshot match: reassurance row + gold statistic rings.
+   The site's own verified highlights live in lib/homeTrustStats.js. */
+.ref-site .ref-trust-strip{
+  position:relative;
+  background:linear-gradient(180deg,#11111b 0%,#12111b 100%);
+  border-bottom:1px solid #323041;
+  min-height:104px;
+  display:flex;
+  align-items:flex-end;
+  padding:43px 0 25px;
+}
+.ref-site .ref-trust-chevron{
+  position:absolute;top:18px;left:50%;width:12px;height:12px;
+  border-right:2px solid #9c813b;border-bottom:2px solid #9c813b;
+  transform:translateX(-50%) rotate(45deg);opacity:.85;
+}
+.ref-site .ref-trust-inner{
+  max-width:1050px;display:flex;align-items:center;justify-content:center;
+  flex-wrap:nowrap;gap:0;
+}
+.ref-site .ref-trust-item{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  padding:0 23px;min-height:19px;white-space:nowrap;
+  color:#a8a0a5;font-size:13px;line-height:1.45;
+}
+.ref-site .ref-trust-item + .ref-trust-item{border-left:1px solid #50424a}
+.ref-site .ref-trust-check{color:#d9b84c;font-size:16px;font-weight:700;line-height:1}
+.ref-site .ref-stats{
+  min-height:257px;padding:61px 0 54px;
+  background:linear-gradient(112deg,#231f31 0%,#1d1b2e 48%,#191829 100%);
+  border-bottom:1px solid #3a3245;
+}
+.ref-site .ref-stats-inner{
+  width:min(100% - 30px,1020px);max-width:1020px;
+  padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+  justify-items:center;align-items:start;gap:0;
+}
+.ref-site .ref-stat{min-width:0;width:100%;text-align:center}
+.ref-site .ref-stat strong{
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto;width:104px;height:104px;border:4px solid #d2af4c;
+  border-radius:50%;background:transparent;color:#d6b54f;
+  font-family:Georgia,'Times New Roman',serif;font-size:34px;
+  font-weight:400;line-height:1;letter-spacing:-.035em;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.ref-site .ref-stat small{
+  display:block;margin-top:17px;font-family:Arial,Helvetica,sans-serif;
+  letter-spacing:.12em;font-size:14px;color:#aba1a6;font-weight:400;line-height:1.4;
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .ref-site .ref-stat:hover strong{transform:translateY(-4px);border-color:#e9ce78;box-shadow:0 0 21px #d2af4c22}
+}
+@media(max-width:1060px){
+  .ref-site .ref-trust-inner{flex-wrap:wrap;row-gap:12px}
+  .ref-site .ref-trust-item{font-size:12px;padding:0 15px}
+}
+@media(max-width:780px){
+  .ref-site .ref-trust-strip{padding:42px 0 22px}
+  .ref-site .ref-trust-inner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 6px}
+  .ref-site .ref-trust-item{padding:0 6px;justify-content:flex-start;white-space:normal;line-height:1.35}
+  .ref-site .ref-trust-item + .ref-trust-item{border-left:none}
+  .ref-site .ref-stats{padding:46px 0}
+  .ref-site .ref-stats-inner{width:min(100% - 40px,650px);grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 10px}
+  .ref-site .ref-stat strong{width:95px;height:95px;font-size:30px}
+  .ref-site .ref-stat small{font-size:12px;margin-top:13px}
+  .ref-site .ref-stat:nth-child(4){grid-column:1 / 2;margin-left:50%}
+  .ref-site .ref-stat:nth-child(5){grid-column:3 / 4;margin-left:-50%}
+}
+@media(max-width:480px){
+  .ref-site .ref-trust-inner{width:min(100% - 28px,420px);column-gap:12px;row-gap:14px}
+  .ref-site .ref-trust-item{gap:7px;padding:0;font-size:11px}
+  .ref-site .ref-trust-check{font-size:14px}
+  .ref-site .ref-stats{padding:42px 0 49px}
+  .ref-site .ref-stats-inner{width:min(100% - 22px,370px);grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 4px}
+  .ref-site .ref-stat strong{height:93px;width:93px;font-size:29px;border-width:3px}
+  .ref-site .ref-stat small{font-size:11px;margin-top:10px}
+  .ref-site .ref-stat:nth-child(4),.ref-site .ref-stat:nth-child(5){grid-column:auto;margin-left:0}
+  .ref-site .ref-stat:nth-child(5){grid-column:1/-1;justify-self:center;width:50%}
+}
+@media(prefers-reduced-motion:reduce){.ref-site .ref-stat strong{transition:none!important}}
+
+/* Trust-stat typography safety (v2). Large circular figures remain inside the ring.
+   Scoped to the public homepage; never affects the Maxton admin dashboard. */
+.ref-site .ref-stat strong {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 8px;
+  text-align: center;
+  overflow: hidden;
+}
+.ref-site .ref-stat-value {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  overflow: hidden;
+  font-size: inherit;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.ref-site .ref-stat-value--long {
+  font-size: 0.66em;
+  letter-spacing: -0.045em;
+}
+.ref-site .ref-stat small {
+  overflow-wrap: break-word;
+}
+@media(max-width:480px) {
+  .ref-site .ref-stat strong { padding: 7px; }
+}

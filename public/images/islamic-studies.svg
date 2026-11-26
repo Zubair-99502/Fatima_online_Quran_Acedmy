@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="ISLAMIC STUDIES">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1eadc"/><stop offset="1" stop-color="#fffaf0"/></linearGradient><pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#c8a45f" opacity=".35"/></pattern></defs>
+<rect width="640" height="520" fill="url(#bg)"/><rect width="640" height="520" fill="url(#dots)"/>
+<path d="M30 30h580v460H30z" fill="none" stroke="#c8a45f" stroke-opacity=".45" stroke-width="2" rx="24"/>
+<g opacity=".96"><path d="M320 95L380 150V300L320 360L260 300V150Z" fill="#fff7e6" stroke="#c8a45f" stroke-width="6"/><path d="M320 95V55M290 360h60" stroke="#315b4d" stroke-width="5"/><path d="M320 170q-45 45 0 100q45-55 0-100" fill="#c8a45f" opacity=".8"/><path d="M160 400Q320 330 480 400" stroke="#315b4d" stroke-width="6" fill="none" opacity=".35"/></g>
+<text x="320" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="23" letter-spacing="2" fill="#315b4d">ISLAMIC STUDIES</text>
+<text x="320" y="483" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" letter-spacing="1.2" fill="#315b4d" opacity=".7">Learn everyday essentials</text>
+</svg>

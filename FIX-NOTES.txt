@@ -1,0 +1,15 @@
+Runtime Fix — Next.js 15 Server Component event handlers
+
+FIXED: app/page.js, app/about/page.js, and app/free-trial/page.js no longer put onError callbacks directly on image elements rendered by Server Components. Their image fallback logic now lives in components/FallbackImage.js (a Client Component).
+
+Existing course-card image fallback remains in components/CourseCard.js, which already has 'use client'.
+
+Run on Windows:
+1. Extract ZIP and enter the fatima-online-quran-academy folder (the folder containing package.json).
+2. npm install
+3. npm run dev
+4. Open http://localhost:3000
+
+To avoid stale errors from a previous build, stop the dev server, remove the .next directory if it exists, and restart npm run dev.
+
+Note: Full npm build was not verified in this environment because dependency download was unavailable.

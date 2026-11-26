@@ -1,0 +1,19 @@
+FATIMA ONLINE QURAN ACADEMY — START HERE
+
+The ZIP has package.json at its root. NO EXTRA PROJECT SUBFOLDER.
+
+Windows:
+1. Extract ZIP into a folder of your choice.
+2. Install Node.js 22 from https://nodejs.org/.
+3. Open the extracted folder and double-click RUN-WINDOWS.bat.
+4. Set MONGODB_URI, AUTH_SECRET, ADMIN_EMAIL and ADMIN_PASSWORD in .env.local.
+5. Run again if needed; open http://localhost:3000.
+6. In the website footer, click Admin Login, or use http://localhost:3000/admin/login.
+
+If using CMD instead of the .bat file, open CMD in the same folder as package.json:
+  npm install
+  npm run dev
+
+To build: npm run build
+
+Important: A working internet connection is needed for npm install. MongoDB is required for inquiries, students and teacher management. Live payments require real merchant credentials, configured Stripe prices and a verified webhook. Change the credentials previously shared in chat before deploying to GitHub/Vercel.
